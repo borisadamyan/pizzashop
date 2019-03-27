@@ -123,7 +123,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'pizzashopapp/templates/'),
+#STATICFILES_DIRS = os.path.join(BASE_DIR, 'pizzashopapp/templates/'),
 #STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 
 LOGIN_REDIRECT_URL = '/'
@@ -166,4 +166,4 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.user.user_details',
 )
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
