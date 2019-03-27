@@ -24,7 +24,7 @@ SECRET_KEY = '$m8rnar3s**r+f=5hzc=poq*o-(&kg#nuk)844r@dd%)ur-&n9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://my-pizzashopapp.herokuapp.com/', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -126,6 +126,13 @@ STATICFILES_DIRS = os.path.join(BASE_DIR, 'pizzashopapp/templates/'),
 LOGIN_REDIRECT_URL = '/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+import dj_database_url
+
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.facebook.FacebookOAuth2',
