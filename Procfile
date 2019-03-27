@@ -1,1 +1,1 @@
-web: gunicorn pizzashop.wsgi --log-file-
+web: uwsgi uwsgi.ini
