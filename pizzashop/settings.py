@@ -24,7 +24,7 @@ SECRET_KEY = '$m8rnar3s**r+f=5hzc=poq*o-(&kg#nuk)844r@dd%)ur-&n9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://my-pizzashopapp.herokuapp.com/', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['my-pizzashopapp.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
